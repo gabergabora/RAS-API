@@ -5,7 +5,7 @@ const router = require('express').Router();
 
 // ADD ITEM (ONLY ADMIN)
 router.post("/", verifyTokenAndAdmin, async (req, res) => {
-    const newItem = new Item(req.body);
+    const newItem = new Item(req.body);             
   
     try {
         const savedItem = await newItem.save();
